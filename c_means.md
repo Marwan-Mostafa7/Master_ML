@@ -1,11 +1,15 @@
 ## C means algorithm
 
+#### initial state
+
 ```python
 m = 2 ### let fuzziness factor = 2
+## Input Data
 X = np.array([
     [1, 2],
     [3, 4]
 ])
+## Initial centers
 C = np.array([0.01, 2.4, 3.2])
 ```
 
@@ -17,20 +21,31 @@ Distance between each point in matrix and each Center
 for i, x in enumerate(X.flatten()):
     for j, c in enumerate(C):
         D[j][i] = abs(x - c)
+
+### Output
+
+array([[0.99, 1.99, 2.99, 3.99],
+       [1.4 , 0.4 , 0.6 , 1.6 ],
+       [2.2 , 1.2 , 0.2 , 0.8 ]])
 ```
 
         
 ### Membership matrix
 
 ```python
+# loop through Distance Matrix columns
 for c in range(D.shape[1]):
+    # list to append each column
     a= []
+    # calculate the membership
     for d in D[:, c]:
         s = 0
         for i, _ in enumerate(D[:, 0]):
             s += ((d**m) / D[i, 0]**m)
         a.append(s)
+    # normalize values
     norm = [round(float(i)/sum(a), 2) for i in a]
+    # update membership matrix
     Mio[:, c] = norm
     
 ## Output
