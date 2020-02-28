@@ -1,3 +1,5 @@
+## C means algorithm
+
 ```python
 m = 2 ### let fuzziness factor = 2
 X = np.array([
