@@ -24,14 +24,12 @@ plt.show()
 ![](imgs/K_means_01.png)
 
 ### Calculating distance
-**Ecludian distance** between each point and the center
+**Ecludian distance** between each point and each center
 
 ```python
-plot_k_means(df, C, 'Random Centers')
+plot_k_means(df, C)
 ```
-
-![](imgs/K_means_01.png)
-
+![](imgs/K_means_02.png)
 
 ### Updating Centers
 
