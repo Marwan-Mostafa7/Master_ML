@@ -154,8 +154,8 @@ array([[0.84, 0.93, 0.05, 0.03],
 
 X = 1 belong to Cluster C_1 with 85\% 
 
-X = 2 belong to Cluster C_2 with 93\% 
+X = 2 belong to Cluster C_1 with 93\% 
 
-X = 3 belong to Cluster C_3 with 48\% 
+X = 3 belong to Cluster C_2 with 48\% 
 
-X = 4 belong to Cluster C_3, C_4 with 48\% 
+X = 4 belong to Cluster C_2, C_3 with 48\% 
